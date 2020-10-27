@@ -1,7 +1,7 @@
 package com.nityainc;
 
 /*Java program to which contains a.b.c = c.b.a; as a statement*/
-public class Main {
+public class StaticClassDemo {
 
     public static void main(String[] args) {
         A a = new A();
@@ -12,11 +12,13 @@ public class Main {
 
         a.b.c = c.b.a;
 
+
         System.out.println(a.b.c);
     }
 
     private static class A {
         B b;
+
         private static class B {
             private int c;
         }
@@ -24,6 +26,7 @@ public class Main {
 
     private static class C {
         B b;
+
         private static class B {
             private static int a;
         }
